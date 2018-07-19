@@ -1,0 +1,458 @@
+/* ----------------------------------- */
+/* Basic Setup */
+/* ----------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    /* word color */
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    /* 還是不知道這要幹麻? */
+    overflow-x: hidden;
+}
+
+/* ----------------------------------- */
+/* Reusable Components */
+/* ----------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 300px;
+}
+/* Heading */
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20;
+    color: #fff;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* Links */
+/* 如果之後有特別設定a這邊就還好 */
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s,
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* Buttons */
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-my-career:link,
+.btn-my-career:visited {
+    border: 1px solid #fff;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-movie:link,
+.btn-movie:visited {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: rgba(207, 109, 23, 0.7);
+}
+
+.btn-my-career:hover,
+.btn-my-career:active {
+    border: 1px solid #e67e22;
+}
+
+.btn-movie:hover,
+.btn-movie:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+/* ----------------------------------- */
+/* Header */
+/* ----------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.6)), url(backgroundimg/Hollywood-back.JPG);
+    /* linear-gradient(顏色一, 顏色二) 上到下漸層 */
+    background-size: cover;
+    /* 圖片塞滿整個背景大小 */
+    background-position: center;
+    /* 圖片置中 */
+    height: 100vh;
+    /* 沒事就設定100vh塞滿著個頁面 */
+    background-attachment: fixed;
+    /* 必用固定背景 */
+}
+
+.my-hearder-msg {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logo-top {
+    height: 60px;
+    width: auto;
+    float: left;
+    margin-top: 30px;
+}
+
+.logo-nav {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 35px 0;
+}
+
+/* Main Navi */
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    /* 因為是float right所以使用margin-left */
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 1px solid #fff;
+}
+
+
+
+/* ----------------------------------- */
+/* About Me */
+/* ----------------------------------- */
+
+.my-pic {
+    height: auto;
+    padding: 5%;
+    width: 220%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: translate(-25%,-10%);
+    filter: grayscale(40%);
+    /* 讓圖片變成有點黑白效果 */
+    
+}
+
+.about-me-msg p {
+    font-size: 90%;
+    letter-spacing: 2px;
+    line-height: 140%;
+}
+
+.about-My-Story h1 {
+    color: #000;
+}
+
+.about {
+    margin-bottom: 3%;
+}
+
+.about h2 {
+    color: #000000;
+    font-size: 300%;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+/* ----------------------------------- */
+/* LA Life */
+/* ----------------------------------- */
+
+.row h2 {
+    margin-bottom: 3%;
+}
+
+.LA-Life {
+    list-style: none;
+    max-width: 97%;
+}
+
+.LA-Life li {
+    width: 32.6%;
+    display: inline-block;
+}
+
+.LA-photo {
+    padding: 1%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.LA-photo img {
+    width: 100%;
+    opacity: 0.95;
+    height: auto;
+    transform: scale(1.2);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.LA-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+
+/* ----------------------------------- */
+/* Sports */
+/* ----------------------------------- */
+
+.section-sports {
+    margin: 0;
+}
+
+.Sports {
+    margin-top: 300px;
+    margin-left: 2.5%;
+}
+
+.nfl {
+    background-image: url(backgroundimg/Tom%20Brady%201.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 105vh;
+}
+
+.ncaa {
+    background-image: url(backgroundimg/Sam%20Donald%201.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 105vh;
+    
+}
+
+.nfltitle,
+.ncaatitle {
+    font-size: 200%;
+    margin: 40px 20px 0px 0px;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 140%;
+}
+
+.superbowltitle,
+.rosebowltitle {
+    font-size: 150%;
+    color: #000;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    line-height: 140%;
+}
+
+.nfltitle,
+.superbowltitle,
+.superbowlvideo {
+    width: 600px;
+    transform: translate(7%);
+}
+
+.ncaatitle,
+.rosebowltitle,
+.rosebowlvideo {
+    width: 600px;
+    transform: translate(170%);
+}
+
+
+/* ----------------------------------- */
+/* Coding */
+/* ----------------------------------- */
+
+.my-mac {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.codingnum ul {
+    list-style: none;
+    margin-left: 2%;
+}
+
+.codingnum h3 a,
+.codingnum h3 {
+    border-bottom: 0;
+    margin: 10px 0px;
+    color: #000;
+    font-size: 100%;
+    letter-spacing: 2px;
+    line-height: 140%;
+}
+
+.codingnum ul li a {
+    font-size: 90%;
+    letter-spacing: 2px;
+    border-bottom: 0;
+    line-height: 140%;
+    color: #000;
+}
+
+.codingnum h3 a:link,
+.codingnum h3 a:visited,
+.web-design:link,
+.web-design:visited,
+.codingnum ul li a:link,
+.codingnum ul li a:visited {
+    border-bottom: 1px solid transparent;
+}
+
+.codingnum h3 a:hover,
+.codingnum h3 a:active,
+.web-design:active,
+.web-design:hover,
+.codingnum ul li a:hover,
+.codingnum ul li a:active {
+    border-bottom: 1px solid #000;
+    transition: border-bottom 0.3s;
+}
+
+.readmore {
+    margin: 40px 20px 40px 0px;
+}
+
+
+
+
+
+
+
+
+
+/* ----------------------------------- */
+/* Footer */
+/* ----------------------------------- */
+
+footer {
+    background-color: rgb(49, 49, 49);
+    padding: 50px;
+}
+
+.box {
+    text-align: center;
+    max-width: 15%;
+    margin-left: 13%;
+}
+
+.box a:link,
+.box a:visited {
+    font-size: 400%;
+    color: #555;
+    border: 0;
+    /* 讓底線不見 */
+}
+
+.box p {
+    color: yellow;
+    margin-top: 20%;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.box h5 {
+    color: #fff;
+    margin-top: 10%;
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 130%;
+}
+
+.copyright {
+    color: #fff;
+    margin-top: 4%;
+    text-align: center;
+}
+
+.ion-social-facebook,
+.ion-social-instagram, 
+.ion-social-linkedin, 
+.ion-social-twitter {
+    transition: color 0.2s;
+}
+
+
+.ion-social-facebook:hover,
+.ion-social-facebook:active {
+    color: #3b5998;
+}
+
+.ion-social-instagram:hover,
+.ion-social-instagram:active {
+    color: #e95950;
+}
+
+.ion-social-twitter:hover,
+.ion-social-twitter:active {
+    color: #1dcaff;
+}
+
+.ion-social-linkedin:hover,
+.ion-social-linkedin:active {
+    color: #0077B5;
+}
+
+
+
+
+
+
+
+
+
+...
